@@ -1,4 +1,6 @@
 # ${data.title}
+  
+${data.licenseBadge}  
 
 ## Description 
 
@@ -28,7 +30,7 @@ ${data.usage}
 
 ## License
 
-${data.license}
+This application is covered under ${data.license}.
 
 
 ## Contributing
@@ -44,7 +46,7 @@ ${data.tests}
 ## Questions
 
 Got questions? Feel free to contact me.  
-Github username: ${data.githubUsername}  
+Github username: [${data.githubUsername}](github.com/${data.githubUsername})   
 Email address: ${data.email}  
 
 ---

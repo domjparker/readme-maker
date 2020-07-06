@@ -37,6 +37,20 @@ function promptUser() {
         name: "license",
         message: "Choose a license that lets other developers know what they can and cannot do with your project.",
         choices: [
+            "a [MIT License](https://opensource.org/licenses/MIT).",
+            "a [GPL v3 License](https://www.gnu.org/licenses/gpl-3.0).",
+            "an [AGPL v3 License](https://www.gnu.org/licenses/agpl-3.0).",
+            "an [LGPL v3 License](https://www.gnu.org/licenses/lgpl-3.0).",
+            "a [MPL 2.0 License](https://opensource.org/licenses/MPL-2.0).",
+            "an [Apache 2.0 License](https://opensource.org/licenses/Apache-2.0).",
+            "a [Boost Software License](https://www.boost.org/LICENSE_1_0.txt).",
+        ]
+    },
+    {
+        type: "list",
+        name: "licenseBadge",
+        message: "Choose a badge that corresponds to the type of license you chose in the previous question.",
+        choices: [
             "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)",
             "[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)",
             "[![License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)",
@@ -72,7 +86,9 @@ function promptUser() {
 // function to write README file
 function writeToFile(data) {
     return `
-    # ${data.title}
+# ${data.title}
+
+${data.licenseBadge}
 
 ## Description 
 
@@ -118,7 +134,7 @@ ${data.tests}
 ## Questions
 
 Got questions? Feel free to contact me.  
-Github username: ${data.githubUsername}  
+Github username: [${data.githubUsername}](github.com/${data.githubUsername})  
 Email address: ${data.email}
 
 ---
