@@ -117,8 +117,8 @@ ${data.tests}
 
 ## Questions
 
-Got questions? Feel free to contact me.
-Github username: ${data.githubUsername}
+Got questions? Feel free to contact me.  
+Github username: ${data.githubUsername}  
 Email address: ${data.email}
 
 ---
