@@ -2,7 +2,8 @@
 // Todo: parse results to markdown
 // Todo: save this markdown to a readme.md file
 
-const Choice = require("inquirer/lib/objects/choice");
+const inquirer = require("inquirer");
+// const Choice = require("inquirer/lib/objects/choice");
 const fs = require("fs");
 const util = require("util")
 
@@ -69,7 +70,7 @@ function promptUser() {
 }
 
 // function to write README file
-function writeToFile(answers) {
+function writeToFile(data) {
     return `
     # ${data.title}
 
@@ -128,9 +129,16 @@ Email address: ${data.email}
 }
 
 // function to initialize program
-async function init() {
-
-}
+promptUser() 
+    .then(function(data) {
+        const readme = writeToFile(data);
+        return fs.writeFileSync("README.md", readme);
+    })
+    .then(function() {
+        console.log("successfully wrote to readme.md")
+    }) .catch(function(err) {
+        console.log(err)
+    });
 
 // function call to initialize program
-init();
+// init();
