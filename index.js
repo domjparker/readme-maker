@@ -9,7 +9,8 @@ const util = require("util")
 const writeFileAsync = util.promisify(fs.writeFile);
 
 // array of questions for user
-const questions = [
+function promptUser() {
+    return inquirer.prompt([ 
     {
         type: "input",
         name: "title",
@@ -35,13 +36,13 @@ const questions = [
         name: "license",
         message: "Choose a license that lets other developers know what they can and cannot do with your project.",
         choices: [
-           "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)",
-           "[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)",
-           "[![License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)",
-           "[![License: LGPL v3](https://img.shields.io/badge/License-LGPL%20v3-blue.svg)](https://www.gnu.org/licenses/lgpl-3.0)",
-           "[![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)",
-           "[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)",
-           "[![License](https://img.shields.io/badge/License-Boost%201.0-lightblue.svg)](https://www.boost.org/LICENSE_1_0.txt)",
+            "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)",
+            "[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)",
+            "[![License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)",
+            "[![License: LGPL v3](https://img.shields.io/badge/License-LGPL%20v3-blue.svg)](https://www.gnu.org/licenses/lgpl-3.0)",
+            "[![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)",
+            "[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)",
+            "[![License](https://img.shields.io/badge/License-Boost%201.0-lightblue.svg)](https://www.boost.org/LICENSE_1_0.txt)",
         ]
     },
     {
@@ -64,15 +65,70 @@ const questions = [
         name: "email",
         message: "What is your email address, so that people can reach you?"
     },
-    
-];
+    ]);
+}
 
 // function to write README file
-function writeToFile(fileName, data) {
+function writeToFile(answers) {
+    return `
+    # ${data.title}
+
+## Description 
+
+${data.description}
+
+
+## Table of Contents
+
+* [Installation](#installation)
+* [Usage](#usage)
+* [License](#license)
+* [Contributing](#contribution)
+* [Tests](#tests)
+* [Questions](#questions)
+
+
+
+## Installation
+
+${data.installation}
+
+
+## Usage 
+
+${data.usage} 
+
+
+## License
+
+${data.license}
+
+
+## Contributing
+
+${data.contributing}
+
+
+## Tests
+
+${data.tests}
+
+
+## Questions
+
+Got questions? Feel free to contact me.
+Github username: ${data.githubUsername}
+Email address: ${data.email}
+
+---
+
+© 2020, Dominic Parker. All Rights Reserved.
+
+`;
 }
 
 // function to initialize program
-function init() {
+async function init() {
 
 }
 
