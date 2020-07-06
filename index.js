@@ -134,7 +134,7 @@ ${data.tests}
 ## Questions
 
 Got questions? Feel free to contact me.  
-Github username: [${data.githubUsername}](github.com/${data.githubUsername})  
+Github username: ${data.githubUsername}  
 Email address: ${data.email}
 
 ---
