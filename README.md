@@ -1,7 +1,7 @@
 
-# alkjaldfj
+# README MAKER
 
-## aldkjalkdfjalkj  
+## An easy way to complete a structured readme.md file  
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)  
 
@@ -9,6 +9,7 @@
 
 ## Table of Contents
 
+* [Description](#description)
 * [Installation](#installation)
 * [Usage](#usage)
 * [License](#license)
@@ -20,21 +21,21 @@
 
 ## Description 
 
-aldkjaldfkjaldfkj  
+This is a simple application that guides you through the process of creating a structured readme. I made it to experiment with node.js, but also because I don't like having to put much thought into what goes into creating and structuring a readme file. So essentially, it just takes me through the content sections step by step, and then structures it for me. As long as I answer the questions, it produces a formatted readme file on the other end.    
 
-![image1](index&questions.png)   this is image1   ![image2](index&questions.png)   this is image2    ![image3](index&questions.png)   this is image3    
+![index.js file and questions.js file code examples](index&questions.png)   The above image is of the index.js file on the left, and then the modularized questions.js file on the right which contains the question used by the inquirer package.   ![code examples of the writeFile function, along with a completed (test) readme.md file, and a preview of it](writeFunction&readmeExample.png)   This image shows you the writeToReadme function, along with a generated (example) readme.md file, and a preview of it.  
 
 
 
 ## Installation
 
-lkjlkjlkja
+To install, make sure you have the package.json initiated, along with the dependencies installed (e.g. npm inquirer ). Then just open terminal and execute 'node index.js'
 
 
 
 ## Usage 
 
-adlkfjadlfkjasd 
+After installation, and using node to execute the index.js file, just let the application guide you through the process of answering each question. If you have images you want included, make sure these are included in any folders pushed to Github. When the readme file is generated, copy and paste it, along with any accompanying images, to your project files.  
 
 
 
@@ -46,21 +47,21 @@ a [MIT License](https://opensource.org/licenses/MIT).
 
 ## Contributing
 
-adslfkjadeflkj
+Feel free to contribute or give me suggestions for improvement at my email below.
 
 
 
 ## Tests
 
-aldkjldkj
+I don't have any tests at present.
 
 
 
 ## Questions
 
 Got questions? Feel free to contact me.  
-Github username: [adlfkj](https://github.com/adlfkj)  
-Email address: asdflkfj
+Github username: [domjparker](https://github.com/domjparker)  
+Email address: dominic.j.parker@gmail.com
 
 ---
 
