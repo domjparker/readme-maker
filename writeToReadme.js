@@ -43,7 +43,7 @@ ${data.usage}
 
 ## License
 
-${data.license}
+This application is covered under ${data.license}
 
 
 
