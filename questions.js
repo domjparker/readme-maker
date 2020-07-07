@@ -6,8 +6,18 @@ const questions = [
     },
     {
         type: "input",
-        name: "description",
+        name: "descriptionShort",
+        message: "Give a one-line short description of your project"
+    },
+    {
+        type: "input",
+        name: "descriptionExtended",
         message: "Explain the what, why, and how. What was your motivation? Why did you build this project?"
+    },
+    {
+        type: "input",
+        name: "images",
+        message: "If you want to include images with your extended description, input them here, using the format ![GitHub Logo](/images/logo.png). Be sure to include the exact relative file path. To include a caption, leave 2 spaces after each image and 2 spaces also after writing your caption."
     },
     {
         type: "input",

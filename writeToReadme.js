@@ -3,15 +3,15 @@ function writeToReadme(data) {
     return `
 # ${data.title}
 
-${data.licenseBadge}
+## ${data.descriptionShort}  
 
-## Description 
+${data.licenseBadge}  
 
-${data.description}
 
 
 ## Table of Contents
 
+* [Description](#description)
 * [Installation](#installation)
 * [Usage](#usage)
 * [License](#license)
@@ -21,9 +21,18 @@ ${data.description}
 
 
 
+## Description 
+
+${data.descriptionExtended}  
+
+${data.images}
+
+
+
 ## Installation
 
 ${data.installation}
+
 
 
 ## Usage 
@@ -31,9 +40,11 @@ ${data.installation}
 ${data.usage} 
 
 
+
 ## License
 
 ${data.license}
+
 
 
 ## Contributing
@@ -41,9 +52,11 @@ ${data.license}
 ${data.contributing}
 
 
+
 ## Tests
 
 ${data.tests}
+
 
 
 ## Questions
